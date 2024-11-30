@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pages/Miarchivo.css">
+    <link rel="icon" href="./img/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="./js/pages/Miarchivo.js" defer></script>
+    <title>Cotizador de Monedas</title>
+</head>
+
+<body>
+    <header class="contenedor-header">
+        <div class="header-contenido">
+            <img class="logo-img" src="./img/logo.png" alt="logo-img">
+            <h1 class="titulo-header">Cotizador de Monedas</h1>
+        </div>
+    </header>
+    <div class="contenedor-principal">
+        <section class="barra-lateral">
+            <div class="home-page-principal">
+                <a href="./Index.html">
+                    <span class="icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    <span class="text">INICIO</span>
+                </a>
+            </div>
+            <div class="page-home">
+                <a href="./Miarchivo.html">
+                    <span class="icon">
+                        <i class="fa-solid fa-folder"></i>
+                    </span>
+                    <span class="text">MI ARCHIVO</span>
+                </a>
+            </div>
+            <div class="page-home">
+                <a href="./Informe.html">
+                    <span class="icon">
+                        <i class="fa-solid fa-file-alt"></i>
+                    </span>
+                    <span class="text">INFORMES</span>
+                </a>
+            </div>
+            <div class="page-home">
+                <a href="./Contacto.html" target="_self">
+                    <span class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <span class="text">CONTACTOS</span>
+                </a>
+            </div>
+            <div class="contenedor-imagen-perfil">
+                <div class="contenedor-img"><img class="imagen-perfil" src="./img/20240222_115912-removebg-preview.png"
+                        alt="foto-perfil">
+                </div>
+                <div id="contenedor_reseña">
+                    <div class="nombre-perfil">
+                    </div>
+                    <div class="texto_reseña">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main>
+            <div class="contendor-main-miarchivo">
+                <span class="migas_pan">Usted esta aqui:<a href="index.html">INICIO</a>/<a href="Miarchivo.html">Mi
+                        Archivo</a></span>
+                <div class="cabecera-miarchivo ">
+                    <div class="titulo_archivo">
+                        <h1>Mi Archivo</h1>
+                    </div>
+                    <div class="imagen_archivo" id="btnImprimir">
+                        <img src="img/impresora.png" alt="impresora_cabecera">
+                    </div>
+                </div>
+                <div>
+                    <div class="container" id="tablaParaImprimir">
+                        <div class="cabecera-table">
+                            <ul>
+                                <li>FECHA</li>
+                                <li>MONEDA</li>
+                                <li>COMPRA</li>
+                                <li>VENTA</li>
+                                <li>ACCIÓN</li>
+                            </ul>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr class="titulos_table">
+                                    <th>FECHA</th>
+                                    <th>MONEDA</th>
+                                    <th>COMPRA</th>
+                                    <th>VENTA</th>
+                                    <th>ACCIÓN</th>
+                                </tr>
+                            </thead>
+                            <tbody id="archivoContainer">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>INSTITUCIONAL</h4>
+                <ul>
+                    <li><a href="#">¿Quiénes Somos?</a></li>
+                    <li><a href="#">Socios Estratégicos</a></li>
+                    <li><a href="#">Trabaje con Nosotros</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ACCESOS</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Mi Archivo</a></li>
+                    <li><a href="#">Informes</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONTACTO</h4>
+                <p>
+                    Universidad Tecnológica Nacional<br><br>
+                    ZEBALLOS 1341 - S2000BQA - ROSARIO<br><br>
+                    0341 - 4481871 <br><br>
+                    <a href="./Contacto.html" class="footer-escribanos">¡Escríbanos!</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-info-alumno">
+                    <br><br>
+                    <p>
+                        DESARROLLADO POR: <br><br>
+                        Pedro Olortegui Mendieta(53323)<br>
+                        TUP06-2024
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>TUP - Cátedra de Laboratorio de Computación 2 - Año 2024</p>
+        </div>
+    </footer>
+</body>
+
+</html>

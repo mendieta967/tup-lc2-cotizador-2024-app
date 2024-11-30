@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pages/Contactos.css">
+    <link rel="icon" href="./img/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="./js/pages/Contacto.js" defer></script>
+    <title>Cotizador de Monedas</title>
+</head>
+
+<body>
+    <header class="contenedor-header">
+        <div class="header-contenido">
+            <img class="logo-img" src="./img/logo.png" alt="logo-img">
+            <h1 class="titulo-header">Cotizador de Monedas</h1>
+        </div>
+    </header>
+    <div class="contenedor-principal">
+        <section class="barra-lateral">
+            <div class="home-page-principal">
+                <a href="./Index.html">
+                    <span class="icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    <span class="text">INICIO</span>
+                </a>
+            </div>
+            <div class="page-home">
+                <a href="./Miarchivo.html">
+                    <span class="icon">
+                        <i class="fa-solid fa-folder"></i>
+                    </span>
+                    <span class="text">MI ARCHIVO</span>
+                </a>
+            </div>
+            <div class="page-home">
+                <a href="./Informe.html">
+                    <span class="icon">
+                        <i class="fa-solid fa-file-alt"></i>
+                    </span>
+                    <span class="text">INFORMES</span>
+                </a>
+            </div>
+            <div class="page-home">
+                <a href="./Contacto.html" target="_self">
+                    <span class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <span class="text">CONTACTOS</span>
+                </a>
+            </div>
+            <div class="contenedor-imagen-perfil">
+                <div class="contenedor-img"><img class="imagen-perfil" src="./img/20240222_115912-removebg-preview.png"
+                        alt="foto-perfil">
+                </div>
+                <div id="contenedor_reseña">
+                    <div class="nombre-perfil">
+                    </div>
+                    <div class="texto_reseña">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main>
+            <span class="migas_pan">Usted esta aqui:<a href="index.html">INICIO</a>/<a
+                    href="Contacto.html">CONTACTOS</a></span>
+            <h1 class="titulo_main">Contactos Web Cotizaciones</h1>
+            <div class="contenedor_contactos">
+                <div class="formulario">
+                    <h1>Datos de Contacto</h1>
+                    <form action="#" method="post" class="formulario-contacto" id="contactForm" novalidate>
+                        <div class="campo-formulario">
+                            <label for="nombre-contactos">Nombre: </label>
+                            <input type="text" name="nombre-contactos" id="nombre-contactos"
+                                placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="email-contactos">Email: </label>
+                            <input type="email" name="email-contactos" id="email-contactos"
+                                placeholder="Ingrese su email" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="mensaje">Mensaje: </label>
+                            <textarea id="mensaje" name="mensaje" rows="5"
+                                placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>
+                        <div class="botones-formulario">
+                            <button type="button" class="boton-limpiar" id="boton-limpiar">Limpiar</button>
+                            <button type="submit" class="boton-enviar">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contenedor_informacion">
+                    <div class="texto_main">
+                        <p>Si tiene alguna sugerencia o inconveniente por favor complete
+                            el siguiente formulario y envienoslo. Lo contactaremos en brevedad.<br><br>
+                            Esta web esta desarrollada utilizando <a
+                                href="https://dolarapi.com/">https://dolarapi.com/</a>
+                        </p>
+                    </div>
+                    <div class="contacto_contenedor">
+                        <div class="datos_contacto">
+                            <h1>Datos Contacto</h1>
+                            <ul>
+                                <li>Universidad Tecnológica Nacional</li>
+                                <li>ZEBALLOS 1341 - S2000BQA </li>
+                                <li>Rosario</li>
+                                <li>0341-4481871</li>
+
+                            </ul>
+                        </div>
+                        <div class="logo_utn">
+                            <img src="img/UTN_logo.png" alt="logo_utn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>INSTITUCIONAL</h4>
+                <ul>
+                    <li><a href="#">¿Quiénes Somos?</a></li>
+                    <li><a href="#">Socios Estratégicos</a></li>
+                    <li><a href="#">Trabaje con Nosotros</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ACCESOS</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Mi Archivo</a></li>
+                    <li><a href="#">Informes</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONTACTO</h4>
+                <p>
+                    Universidad Tecnológica Nacional<br><br>
+                    ZEBALLOS 1341 - S2000BQA - ROSARIO<br><br>
+                    0341 - 4481871 <br><br>
+                    <a href="./Contacto.html" class="footer-escribanos">¡Escríbanos!</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-info-alumno">
+                    <br><br>
+                    <p>
+                        DESARROLLADO POR: <br><br>
+                        Pedro Olortegui Mendieta(53323)<br>
+                        TUP06-2024
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>TUP - Cátedra de Laboratorio de Computación 2 - Año 2024</p>
+        </div>
+    </footer>
+</body>
+
+</html>
