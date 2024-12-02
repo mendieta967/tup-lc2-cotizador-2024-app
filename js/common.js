@@ -137,6 +137,7 @@ function mostrarCotizaciones(cotizaciones) {
     cotizacionesConteiner.appendChild(div);
   });
 }
+
 function manejarFavorito(nombre, compra, venta) {
   const index = favoritos.findIndex(
     (favorito) =>

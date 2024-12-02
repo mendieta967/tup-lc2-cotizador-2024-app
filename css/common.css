@@ -339,6 +339,10 @@ main {
     color: #ffa500;
 }
 
+.favorito {
+    color: #ffa500 !important;
+}
+
 .titulo-y-actualizacion {
     margin-right: 170px;
     display: flex;
