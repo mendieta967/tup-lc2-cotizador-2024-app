@@ -43,12 +43,13 @@ function cargarInformes(datos = favoritos) {
     tr.classList.add("tr_fecha");
     div.appendChild(tr);
     informesContainer.appendChild(div);
-    let fecha = datosEstructurados[nombre][0].fecha;
+
     let ventaAnterior =
       datosEstructurados[nombre].length > 1
         ? datosEstructurados[nombre][datosEstructurados[nombre].length - 1]
             .venta
         : null;
+
     datosEstructurados[nombre].forEach((cotizacion) => {
       let aumento = false;
       if (cotizacion.venta > ventaAnterior) {

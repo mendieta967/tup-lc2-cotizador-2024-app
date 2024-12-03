@@ -58,10 +58,12 @@ const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 function cargarArchivo() {
   archivoContainer.innerHTML = "";
-  const datosEstructurados = {};
+
+  const datosEstructurados = {}; //Crea un objeto vacío que estructurará los favoritos agrupándolos por fecha
 
   favoritos.map((cotizacion) => {
     const { fecha, nombre, compra, venta } = cotizacion;
+
     if (!datosEstructurados[fecha]) {
       datosEstructurados[fecha] = [];
     }
@@ -80,6 +82,7 @@ function cargarArchivo() {
         </tr>
         `;
     tr.classList.add("tr_fecha");
+
     archivoContainer.appendChild(tr);
     datosEstructurados[fecha].forEach((cotizacion) => {
       const tr2 = document.createElement("tr");
@@ -94,7 +97,6 @@ function cargarArchivo() {
     });
   });
 }
-
 cargarArchivo();
 
 function eliminarFavorito(fecha, nombre) {

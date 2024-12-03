@@ -3,8 +3,9 @@ const ultimaActualizacion = document.getElementById("ultima-actualizacion");
 const errorConteiner = document.getElementById("error-container");
 const cotizacionesConteiner = document.getElementById("cotizacionesContainer");
 const filtroCotizacion = document.getElementById("filtroCotizacion");
-const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 const botonFiltrar = document.getElementById("botonFiltrar");
+
+const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 botonFiltrar.addEventListener("click", filtrarCotizacion);
 
@@ -90,6 +91,7 @@ cargarCotizacionesHoy();
 //creamos la funcion para mostrar lo que nos trae nuestra API
 
 let cotizacionesActual;
+
 const fecha = new Date();
 const dia = fecha.getDate();
 const mes = fecha.getMonth() + 1; // Los meses empiezan desde 0, por lo tanto sumamos 1
