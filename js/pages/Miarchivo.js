@@ -61,7 +61,7 @@ function cargarArchivo() {
 
   const datosEstructurados = {}; //Crea un objeto vacío que estructurará los favoritos agrupándolos por fecha
 
-  favoritos.map((cotizacion) => {
+  favoritos.forEach((cotizacion) => {
     const { fecha, nombre, compra, venta } = cotizacion;
 
     if (!datosEstructurados[fecha]) {
@@ -82,8 +82,8 @@ function cargarArchivo() {
         </tr>
         `;
     tr.classList.add("tr_fecha");
-
     archivoContainer.appendChild(tr);
+
     datosEstructurados[fecha].forEach((cotizacion) => {
       const tr2 = document.createElement("tr");
       tr2.innerHTML = `

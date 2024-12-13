@@ -1,12 +1,13 @@
 const opinionContainer = document.getElementById("contenedor_reseña");
 const filtroMoneda = document.getElementById("filtroMoneda");
 const buttonFiltroMoneda = document.getElementById("buttonFiltroMoneda");
+const informesContainer = document.getElementById("informesContainer");
 
 const ctx = document.getElementById("miGrafica").getContext("2d");
 const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 const etiquetas = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "junio"];
-const datos = [100, 150, 120, 200, 0, 20];
+const datosTabla = [100, 150, 120, 200, 0, 20];
 const datosLinea1 = [100, 150, 120, 200, 10, 20, 100];
 const datosLinea2 = [80, 120, 140, 180, 0, 50, 56];
 const datosLinea3 = [88, 100, 14, 200, 20, 0, 80];
@@ -15,10 +16,12 @@ buttonFiltroMoneda.addEventListener("click", filtrarInforme);
 
 function cargarInformes(datos = favoritos) {
   informesContainer.innerHTML = "";
+
   const datosEstructurados = {};
 
-  datos.map((cotizacion) => {
+  datos.forEach((cotizacion) => {
     const { fecha, nombre, compra, venta } = cotizacion;
+
     if (!datosEstructurados[nombre]) {
       datosEstructurados[nombre] = [];
     }
@@ -52,6 +55,7 @@ function cargarInformes(datos = favoritos) {
 
     datosEstructurados[nombre].forEach((cotizacion) => {
       let aumento = false;
+
       if (cotizacion.venta > ventaAnterior) {
         aumento = true;
       }
@@ -97,7 +101,7 @@ new Chart(ctx, {
     datasets: [
       {
         label: "Ventas por mes",
-        data: datos,
+        data: datosTabla,
         borderColor: "blue",
         fill: false,
       },
@@ -177,7 +181,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 //funcion para validar el email
 
 function validateEmail(email) {
-  const emailValido = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailValido =
+    /^[a-zA-Z0-9]+([._%+-]*[a-zA-Z0-9]+)*@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
+
   return emailValido.test(email);
 }
 

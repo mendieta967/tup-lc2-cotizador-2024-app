@@ -27,7 +27,6 @@ const opinionesNuevas = [
 ];
 
 let index = 0;
-
 function cambiarOpinion() {
   // sirve para actualizar el contenido con una nueva opinion
   opinionContainer.innerHTML = `
@@ -38,12 +37,10 @@ function cambiarOpinion() {
           <p>${opinionesNuevas[index].comentario}</p>
       </div>
   `;
-  // va ir incrementando es decir cambiando las opiciones cuando no haya mas vuelve desde el principio
   index = (index + 1) % opinionesNuevas.length;
 }
 // llamamos a la funcion
 cambiarOpinion();
-// sirve para que cambie las opiniones cada 5 segundos
 setInterval(cambiarOpinion, 5000);
 
 //Actualizamos la fecha cada vez que entramos
@@ -88,8 +85,6 @@ async function cargarCotizacionesHoy() {
 }
 cargarCotizacionesHoy();
 
-//creamos la funcion para mostrar lo que nos trae nuestra API
-
 let cotizacionesActual;
 
 const fecha = new Date();
@@ -99,6 +94,7 @@ const año = fecha.getFullYear();
 
 const fechaFormateada = `${dia}/${mes}/${año}`;
 
+//creamos la funcion para mostrar lo que nos trae nuestra API
 function mostrarCotizaciones(cotizaciones) {
   console.log(cotizaciones);
   cotizacionesActual = cotizaciones;
@@ -106,13 +102,17 @@ function mostrarCotizaciones(cotizaciones) {
 
   cotizaciones.forEach((cotizacion) => {
     if (cotizacion.nombre == "Dólar") cotizacion.nombre = "Oficial";
+
     const esFavorito = favoritos.find(
       (favorito) =>
         favorito.fecha == fechaFormateada &&
         favorito.nombre == cotizacion.nombre
     );
+
     console.log(esFavorito);
+
     const div = document.createElement("div");
+
     div.innerHTML = `
         <div class="cotizacion" id="${cotizacion.nombre}">
             <div class="titulo_cotizacion">
@@ -145,12 +145,14 @@ function manejarFavorito(nombre, compra, venta) {
     (favorito) =>
       favorito.nombre === nombre && favorito.fecha === fechaFormateada
   );
+
   if (index == -1) {
     const moneda = { nombre, fecha: fechaFormateada, compra, venta };
     favoritos.push(moneda);
   } else {
     favoritos.splice(index, 1);
   }
+
   localStorage.setItem("favoritos", JSON.stringify(favoritos));
   mostrarCotizaciones(cotizacionesActual);
 }

@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //funcion para validar el email
 
 function validateEmail(email) {
-  const emailValido = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailValido =
+    /^[a-zA-Z0-9]+([._%+-]*[a-zA-Z0-9]+)*@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
   return emailValido.test(email);
 }
 

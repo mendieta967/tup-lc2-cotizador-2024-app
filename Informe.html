@@ -74,7 +74,7 @@
             <div class="contenedor-main-informes">
                 <div class="seleccionar_informes">
                     <div class="grafico-selec-informe">
-                        <label for="moneda">Seleccionar moneda:</label>
+                        <label for="filtroMoneda">Seleccionar moneda:</label>
                         <select name="moneda" id="filtroMoneda">
                             <option value="todas">TODAS</option>
                             <option value="Oficial">Dólar Oficial</option>
@@ -103,14 +103,14 @@
                         <div id="popup" class="popup">
                             <div class="popup-content">
                                 <h2>Ingrese los datos</h2>
-                                <form>
+                                <form id="formulario-compartir">
                                     <div class="campo">
                                         <label for="name">Nombre y apellido:</label>
                                         <input type="text" id="name" name="name">
                                     </div>
                                     <div class="campo">
                                         <label for="email">Email:</label>
-                                        <input type="email" id="email" name="email">
+                                        <input type="email" id="email" name="email" required>
                                     </div>
                                     <div class="botones-form">
                                         <button type="button" id="sendButton">Enviar</button>
@@ -153,10 +153,10 @@
             <div class="footer-section">
                 <h4>ACCESOS</h4>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Mi Archivo</a></li>
-                    <li><a href="#">Informes</a></li>
-                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./miArchivo.html">Mi Archivo</a></li>
+                    <li><a href="./informe.html">Informes</a></li>
+                    <li><a href="./contacto.html">Contáctenos</a></li>
                 </ul>
             </div>
             <div class="footer-section">
