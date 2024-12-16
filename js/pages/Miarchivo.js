@@ -59,7 +59,7 @@ const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 function cargarArchivo() {
   archivoContainer.innerHTML = "";
 
-  const datosEstructurados = {}; //Crea un objeto vacío que estructurará los favoritos agrupándolos por fecha
+  const datosEstructurados = {};
 
   favoritos.forEach((cotizacion) => {
     const { fecha, nombre, compra, venta } = cotizacion;
